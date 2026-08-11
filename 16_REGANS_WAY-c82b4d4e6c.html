@@ -1,0 +1,169 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1,viewport-fit=cover'><meta name=theme-color content='#0b1220'><title>16 REGANS WAY, Melrose, MA </title><style>
+:root{--bg:#0b1220;--card:#141c2e;--card2:#1b2740;--line:#26324c;--txt:#eaf0fb;--dim:#93a1bf;
+--accent:#4f8cff;--good:#22c55e;--bad:#ef4444;--warn:#f59e0b;}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:linear-gradient(180deg,#0b1220,#0d1526);color:var(--txt);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:460px;margin:0 auto;padding:0 14px 48px}
+header{position:sticky;top:0;z-index:5;background:rgba(11,18,32,.85);backdrop-filter:blur(10px);
+border-bottom:1px solid var(--line);padding:13px 16px;margin:0 -14px 12px}
+.addr{font-size:18px;font-weight:700}
+.sub{color:var(--dim);font-size:12.5px;margin-top:3px;display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.badge{background:var(--card2);color:var(--txt);border:1px solid var(--line);font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:999px}
+.badge.flood{background:var(--warn);color:#3a2a00;border-color:var(--warn)}
+.badge.noflood{background:var(--good);color:#04310f;border-color:var(--good)}
+.hero{border-radius:18px;overflow:hidden;border:1px solid var(--line);margin-bottom:2px}
+.hero img{width:100%;display:block;height:170px;object-fit:cover}
+.hero iframe{width:100%;height:170px;border:0;display:block;background:#0e1626}
+.hero .noimg{height:120px;background:#141c2e;display:flex;align-items:center;justify-content:center;color:var(--dim);font-size:13px;text-align:center;padding:0 20px}
+.maplink{display:block;text-align:center;margin:8px 0 14px;color:var(--accent);font-size:13px;font-weight:700;
+text-decoration:none;padding:9px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.tabs{display:flex;gap:6px;overflow-x:auto;margin:0 0 14px;padding-bottom:3px;-webkit-overflow-scrolling:touch}
+.tab{flex:0 0 auto;background:var(--card);border:1px solid var(--line);color:var(--dim);font-weight:700;
+font-size:13px;padding:9px 15px;border-radius:999px;cursor:pointer;white-space:nowrap}
+.tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.play{display:none}.play.active{display:block}
+.band{display:flex;justify-content:space-between;align-items:center;padding:14px;background:var(--card2);
+border:1px solid var(--line);border-radius:16px;margin-bottom:14px}
+.roi{font-size:32px;font-weight:800}.roi small{font-size:12px;color:var(--dim);font-weight:600;display:block}
+.hp{text-align:right}.hp .l{color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+.hp .v{font-size:22px;font-weight:800}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:14px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:11px 12px}
+.kpi .l{color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+.kpi .v{font-size:18px;font-weight:750;margin-top:3px}
+.kpi.big{grid-column:span 2}
+.pos{color:var(--good)}.neg{color:var(--bad)}
+.sec{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px 14px;margin-bottom:12px}
+.sec h3{font-size:12.5px;text-transform:uppercase;letter-spacing:.6px;color:var(--dim);margin:6px 2px 8px}
+.ctl{margin:11px 0}
+.ctlrow{display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:2px}
+.cl{color:var(--dim)}.cv{font-weight:700}
+input[type=range]{width:100%;height:30px;accent-color:var(--accent);background:transparent;cursor:pointer;position:relative;z-index:1}
+.slidewrap{position:relative;padding:0 1px}
+.tick{position:absolute;top:9px;height:12px;width:2px;background:var(--warn);border-radius:2px;transform:translateX(-50%);pointer-events:none;z-index:0;box-shadow:0 0 0 2px rgba(11,18,32,.6)}
+.baserow{font-size:11px;color:var(--dim);margin-top:1px}
+.base{cursor:pointer;border-bottom:1px dotted var(--dim)}
+.base+.base{margin-left:16px}
+.cv.moved{color:var(--warn)}
+.tcard{background:var(--card2);border:1px solid var(--line);border-radius:13px;padding:9px 13px;margin:10px 0}
+.th{font-weight:700;font-size:14px}
+.trow{color:var(--dim);font-size:12.5px;margin:2px 0 6px}
+.notes li{color:#c7d2e8;font-size:13px;line-height:1.55;margin:0 0 7px}
+.src{color:var(--dim);font-size:11.5px;margin-top:6px}
+.foot{color:var(--dim);font-size:11.5px;text-align:center;margin-top:16px;line-height:1.6}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.hleft{min-width:0}
+.logo{height:42px;width:auto;max-width:60px;flex:0 0 auto;display:block;object-fit:contain}
+.onlyplay{font-size:15px;font-weight:800;color:var(--txt);margin:2px 0 12px;letter-spacing:.2px}
+.warn{display:none;background:rgba(239,68,68,.12);border:1px solid var(--bad);color:#fca5a5;
+font-size:12.5px;font-weight:600;padding:9px 12px;border-radius:12px;margin:0 0 12px;line-height:1.45}
+.warn.show{display:block}
+.kmax{color:var(--dim);font-size:10.5px;font-weight:600;margin-top:3px}
+</style></head><body><div class=wrap><header><div class="hleft"><div class="addr">16 REGANS WAY, Melrose, MA </div><div class="sub"><span></span><span class="badge">Zoning SR-A</span><span class="badge">Lot 130,650 sf</span><span class="badge noflood">No flood zone</span></div></div><svg class="logo" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-label="logo"><rect width="48" height="48" rx="9" fill="#0b0b0b"/><path d="M24 8 L38.5 40 L30.6 40 L28.1 33.6 L19.9 33.6 L17.4 40 L9.5 40 Z" fill="#eab308"/><path d="M21.7 27.8 L26.3 27.8 L24 19 Z" fill="#0b0b0b"/><rect x="18.2" y="42" width="4.6" height="2.7" rx="0.6" fill="#eab308"/><rect x="25.2" y="42" width="4.6" height="2.7" rx="0.6" fill="#eab308"/></svg></header><div class="hero"><img src="data:image/png;base64,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" alt="lot map"></div><a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=16%20REGANS%20WAY%2C%20Melrose%2C%20MA%20" target="_blank" rel="noopener">View lot on Google Maps &rarr;</a><div class="onlyplay">SFH renovation</div>
+<div class="play active" id="play0">
+  <div class="band">
+    <div class="roi pos" id="p0_roi">+0%<small>Return on cost</small></div>
+    <div class="hp"><div class="l">Gross profit</div><div class="v pos" id="p0_profit">$0</div></div>
+  </div>
+  <div class="grid"><div class="kpi big"><div class="l">Sellout (ARV)</div><div class="v" id="p0_r_sellout">$0</div></div><div class="kpi"><div class="l">Total project cost</div><div class="v" id="p0_r_cost">$0</div></div><div class="kpi"><div class="l">Equity needed</div><div class="v" id="p0_r_equity">$0</div></div><div class="kpi"><div class="l">Units</div><div class="v" id="p0_r_units">0</div></div><div class="kpi"><div class="l">Sellable / GSF</div><div class="v" id="p0_r_gsf">0 sf</div><div class="kmax" id="p0_r_gsfmax"></div></div><div class="kpi"><div class="l">Avg sale $/sqft</div><div class="v" id="p0_r_avgpsf">$0</div></div><div class="kpi"><div class="l">Annual rent (Yr 1)</div><div class="v" id="p0_r_rent">$0</div></div><div class="kpi"><div class="l">Unit mix</div><div class="v" id="p0_r_mix">&mdash;</div></div></div>
+  <div class="warn" id="p0_warn"></div>
+  <div class="sec"><h3>Adjust inputs &mdash; GP &amp; ROI update live</h3><div class="ctl"><div class="ctlrow"><span class="cl">Purchase price</span><span class="cv" id="p0_purchase_o">$2,069,088</span></div><div class="slidewrap"><input type="range" id="p0_purchase" min="1039088.0" max="3309088.0" step="10000" value="2069088" data-fmt="money" data-play="0" data-orig="2069088"><span class="tick" style="left:45.37%"></span></div><div class="baserow"><span class="base" data-reset="p0_purchase">orig $2,069,088 &middot; tap to reset</span></div></div><div class="ctl"><div class="ctlrow"><span class="cl">Construction $/sqft</span><span class="cv" id="p0_constr_o">$275/sf</span></div><div class="slidewrap"><input type="range" id="p0_constr" min="150.0" max="425.0" step="any" value="275" data-fmt="psf" data-play="0" data-orig="275"><span class="tick" style="left:45.45%"></span></div><div class="baserow"><span class="base" data-reset="p0_constr">orig $275/sf &middot; tap to reset</span><span class="base" data-reset="p0_constr" data-resetval="300">$300/sf &middot; tap to set</span></div></div></div>
+  <div class="sec"><h3>Unit mix &amp; pricing</h3><div class="tcard"><div class="th">Studio</div><div class="trow" id="p0_trow0"></div><div class="ctl"><div class="ctlrow"><span class="cl">Units</span><span class="cv" id="p0_cnt0_o">0</span></div><div class="slidewrap"><input type="range" id="p0_cnt0" min="0" max="8" step="1" value="0" data-fmt="int" data-play="0" data-orig="0"><span class="tick" style="left:0.00%"></span></div><div class="baserow"><span class="base" data-reset="p0_cnt0">orig 0 &middot; tap to reset</span></div></div><div class="ctl"><div class="ctlrow"><span class="cl">Size (sqft)</span><span class="cv" id="p0_sz0_o">450 sf</span></div><div class="slidewrap"><input type="range" id="p0_sz0" min="300" max="725.0" step="25" value="450" data-fmt="sf" data-play="0" data-orig="450"><span class="tick" style="left:35.29%"></span></div><div class="baserow"><span class="base" data-reset="p0_sz0">orig 450 sf &middot; tap to reset</span></div></div><div class="ctl"><div class="ctlrow"><span class="cl">Sale $/sqft</span><span class="cv" id="p0_psf0_o">$0/sf</span></div><div class="slidewrap"><input type="range" id="p0_psf0" min="300" max="5.0" step="5" value="0" data-fmt="psf" data-play="0" data-orig="0"><span class="tick" style="left:0.00%"></span></div><div class="baserow"><span class="base" data-reset="p0_psf0">orig $0/sf &middot; tap to reset</span></div></div><div class="ctl"><div class="ctlrow"><span class="cl">Rent / unit</span><span class="cv" id="p0_rent0_o">$0/mo</span></div><div class="slidewrap"><input type="range" id="p0_rent0" min="800" max="25.0" step="25" value="0" data-fmt="rent" data-play="0" data-orig="0"><span class="tick" style="left:0.00%"></span></div><div class="baserow"><span class="base" data-reset="p0_rent0">orig $0/mo &middot; tap to reset</span></div></div></div><div class="tcard"><div class="th">1 Bed</div><div class="trow" id="p0_trow1"></div><div class="ctl"><div class="ctlrow"><span class="cl">Units</span><span class="cv" id="p0_cnt1_o">0</span></div><div class="slidewrap"><input type="range" id="p0_cnt1" min="0" max="5" step="1" value="0" data-fmt="int" data-play="0" data-orig="0"><span class="tick" style="left:0.00%"></span></div><div class="baserow"><span class="base" data-reset="p0_cnt1">orig 0 &middot; tap to reset</span></div></div><div class="ctl"><div class="ctlrow"><span class="cl">Size (sqft)</span><span class="cv" id="p0_sz1_o">700 sf</span></div><div class="slidewrap"><input type="range" id="p0_sz1" min="350.0" max="1125.0" step="25" value="700" data-fmt="sf" data-play="0" data-orig="700"><span class="tick" style="left:45.16%"></span></div><div class="baserow"><span class="base" data-reset="p0_sz1">orig 700 sf &middot; tap to reset</span></div></div><div class="ctl"><div class="ctlrow"><span class="cl">Sale $/sqft</span><span class="cv" id="p0_psf1_o">$0/sf</span></div><div class="slidewrap"><input type="range" id="p0_psf1" min="300" max="5.0" step="5" value="0" data-fmt="psf" data-play="0" data-orig="0"><span class="tick" style="left:0.00%"></span></div><div class="baserow"><span class="base" data-reset="p0_psf1">orig $0/sf &middot; tap to reset</span></div></div><div class="ctl"><div class="ctlrow"><span class="cl">Rent / unit</span><span class="cv" id="p0_rent1_o">$0/mo</span></div><div class="slidewrap"><input type="range" id="p0_rent1" min="800" max="25.0" step="25" value="0" data-fmt="rent" data-play="0" data-orig="0"><span class="tick" style="left:0.00%"></span></div><div class="baserow"><span class="base" data-reset="p0_rent1">orig $0/mo &middot; tap to reset</span></div></div></div><div class="tcard"><div class="th">2 Bed</div><div class="trow" id="p0_trow2"></div><div class="ctl"><div class="ctlrow"><span class="cl">Units</span><span class="cv" id="p0_cnt2_o">0</span></div><div class="slidewrap"><input type="range" id="p0_cnt2" min="0" max="3" step="1" value="0" data-fmt="int" data-play="0" data-orig="0"><span class="tick" style="left:0.00%"></span></div><div class="baserow"><span class="base" data-reset="p0_cnt2">orig 0 &middot; tap to reset</span></div></div><div class="ctl"><div class="ctlrow"><span class="cl">Size (sqft)</span><span class="cv" id="p0_sz2_o">950 sf</span></div><div class="slidewrap"><input type="range" id="p0_sz2" min="475.0" max="1525.0" step="25" value="950" data-fmt="sf" data-play="0" data-orig="950"><span class="tick" style="left:45.24%"></span></div><div class="baserow"><span class="base" data-reset="p0_sz2">orig 950 sf &middot; tap to reset</span></div></div><div class="ctl"><div class="ctlrow"><span class="cl">Sale $/sqft</span><span class="cv" id="p0_psf2_o">$0/sf</span></div><div class="slidewrap"><input type="range" id="p0_psf2" min="300" max="5.0" step="5" value="0" data-fmt="psf" data-play="0" data-orig="0"><span class="tick" style="left:0.00%"></span></div><div class="baserow"><span class="base" data-reset="p0_psf2">orig $0/sf &middot; tap to reset</span></div></div><div class="ctl"><div class="ctlrow"><span class="cl">Rent / unit</span><span class="cv" id="p0_rent2_o">$0/mo</span></div><div class="slidewrap"><input type="range" id="p0_rent2" min="800" max="25.0" step="25" value="0" data-fmt="rent" data-play="0" data-orig="0"><span class="tick" style="left:0.00%"></span></div><div class="baserow"><span class="base" data-reset="p0_rent2">orig $0/mo &middot; tap to reset</span></div></div></div><div class="tcard"><div class="th">3 Bed</div><div class="trow" id="p0_trow3"></div><div class="ctl"><div class="ctlrow"><span class="cl">Units</span><span class="cv" id="p0_cnt3_o">1</span></div><div class="slidewrap"><input type="range" id="p0_cnt3" min="0" max="1" step="1" value="1" data-fmt="int" data-play="0" data-orig="1"><span class="tick" style="left:100.00%"></span></div><div class="baserow"><span class="base" data-reset="p0_cnt3">orig 1 &middot; tap to reset</span></div></div><div class="ctl"><div class="ctlrow"><span class="cl">Size (sqft)</span><span class="cv" id="p0_sz3_o">3,784 sf</span></div><div class="slidewrap"><input type="range" id="p0_sz3" min="1884.0" max="6059.0" step="25" value="3784" data-fmt="sf" data-play="0" data-orig="3784"><span class="tick" style="left:45.51%"></span></div><div class="baserow"><span class="base" data-reset="p0_sz3">orig 3,784 sf &middot; tap to reset</span></div></div><div class="ctl"><div class="ctlrow"><span class="cl">Sale $/sqft</span><span class="cv" id="p0_psf3_o">$520/sf</span></div><div class="slidewrap"><input type="range" id="p0_psf3" min="310.0" max="830.0" step="5" value="520" data-fmt="psf" data-play="0" data-orig="520"><span class="tick" style="left:40.38%"></span></div><div class="baserow"><span class="base" data-reset="p0_psf3">orig $520/sf &middot; tap to reset</span></div></div><div class="ctl"><div class="ctlrow"><span class="cl">Rent / unit</span><span class="cv" id="p0_rent3_o">$0/mo</span></div><div class="slidewrap"><input type="range" id="p0_rent3" min="800" max="25.0" step="25" value="0" data-fmt="rent" data-play="0" data-orig="0"><span class="tick" style="left:0.00%"></span></div><div class="baserow"><span class="base" data-reset="p0_rent3">orig $0/mo &middot; tap to reset</span></div></div></div><div class="tcard"><div class="th">4 Bed</div><div class="trow" id="p0_trow4"></div><div class="ctl"><div class="ctlrow"><span class="cl">Units</span><span class="cv" id="p0_cnt4_o">0</span></div><div class="slidewrap"><input type="range" id="p0_cnt4" min="0" max="12" step="1" value="0" data-fmt="int" data-play="0" data-orig="0"><span class="tick" style="left:0.00%"></span></div><div class="baserow"><span class="base" data-reset="p0_cnt4">orig 0 &middot; tap to reset</span></div></div><div class="ctl"><div class="ctlrow"><span class="cl">Size (sqft)</span><span class="cv" id="p0_sz4_o">0 sf</span></div><div class="slidewrap"><input type="range" id="p0_sz4" min="300" max="25.0" step="25" value="0" data-fmt="sf" data-play="0" data-orig="0"><span class="tick" style="left:0.00%"></span></div><div class="baserow"><span class="base" data-reset="p0_sz4">orig 0 sf &middot; tap to reset</span></div></div><div class="ctl"><div class="ctlrow"><span class="cl">Sale $/sqft</span><span class="cv" id="p0_psf4_o">$0/sf</span></div><div class="slidewrap"><input type="range" id="p0_psf4" min="300" max="5.0" step="5" value="0" data-fmt="psf" data-play="0" data-orig="0"><span class="tick" style="left:0.00%"></span></div><div class="baserow"><span class="base" data-reset="p0_psf4">orig $0/sf &middot; tap to reset</span></div></div><div class="ctl"><div class="ctlrow"><span class="cl">Rent / unit</span><span class="cv" id="p0_rent4_o">$0/mo</span></div><div class="slidewrap"><input type="range" id="p0_rent4" min="800" max="25.0" step="25" value="0" data-fmt="rent" data-play="0" data-orig="0"><span class="tick" style="left:0.00%"></span></div><div class="baserow"><span class="base" data-reset="p0_rent4">orig $0/mo &middot; tap to reset</span></div></div></div></div>
+  <div class="sec"><h3>Comp notes</h3><ul class="notes" style="margin:0;padding-left:18px"><li>SFH renovation: existing 3,784 sqft, all-in reno $275/SF = $1,040,600.</li><li>Resale at $520/sqft (luxury SFH comps) -&gt; ARV $1,967,680.</li><li>27 Holland Rd, Melrose MA 02176 — Sold $1,180,000 / 2,496 sqft = ~$473/sqft (Zillow/MLS, recent 2024–2025, renovated 4BR/3BA)</li><li>31 Sears Ave, Melrose MA 02176 — Sold $1,100,000 / 2,376 sqft = ~$463/sqft (Zillow/MLS, recent 2024–2025, updated 4BR/2BA colonial)</li><li>109 Howard St, Melrose MA 02176 — Sold $970,000 / 2,340 sqft = ~$415/sqft (Zillow/MLS, recent 2024–2025, renovated 3BR/3BA)</li></ul><div class="src">Sources: Redfin (redfin.com/zipcode/02176/housing-market), Zillow (zillow.com/melrose-ma-02176/sold/), Rocket Homes (rockethomes.com/real-estate-trends/ma/melrose), MLS PIN via Redfin/Zillow</div></div>
+  <div class="foot">Purchase basis: assessed x 1.12 &middot; Generated August 11, 2026. Interactive working model &mdash; not an offer, appraisal, or investment advice.</div>
+</div></div><script>var B={"LTV": 0.9, "DEBT": 0.0975, "ORIG": 0.0175, "ACQF": 0.02, "ACQC": 0.07, "PREFR": 0.2, "COMM": 0.05, "CLOSE": 0.015, "OPEX": 0.2, "plays": [{"eff": 1.0, "gsf": 3784.0, "months": 15, "ntypes": 5, "condo": false, "labels": ["Studio", "1BR", "2BR", "3BR", "4BR"], "maxsell": 3784, "rentf": 1.03, "noif": 0.75, "vac": 0.05, "cost_cal": 0.0, "gp_cal": 0.0, "equity_cal": 0.0}]};
+
+function id(x){return document.getElementById(x);}
+function money(n){return '$'+Math.round(n).toLocaleString();}
+function fmtVal(v,f){v=+v;
+ if(f==='money')return money(v);
+ if(f==='psf')return '$'+Math.round(v).toLocaleString()+'/sf';
+ if(f==='rent')return '$'+Math.round(v).toLocaleString()+'/mo';
+ if(f==='sf')return Math.round(v).toLocaleString()+' sf';
+ return Math.round(v).toLocaleString();}
+function deal(purchase,constr,arv,months){
+ var pd=B.LTV*purchase;
+ var acq=purchase+B.ACQF*purchase+B.ACQC*purchase+B.ORIG*pd+B.ORIG*constr;
+ var idb=pd*B.DEBT/12*months, ic=constr*B.DEBT/12*(months/2);
+ var pref=Math.max(acq-pd,0), ip=pref*B.PREFR/12*months;
+ var cost=acq+constr+idb+ic+ip, net=arv*(1-B.COMM-B.CLOSE);
+ return {cost:cost, profit:net-cost, roi:(cost>0?(net-cost)/cost*100:0), equity:pref};
+}
+function recompute(P){
+ var pre='p'+P+'_', pl=B.plays[P];
+ var purchase=+id(pre+'purchase').value, cpsf=+id(pre+'constr').value;
+ var sellable=0, sellout=0, rentTot=0, units=0, mix='';
+ for(var i=0;i<pl.ntypes;i++){
+  var c=+id(pre+'cnt'+i).value, s=+id(pre+'sz'+i).value, p=+id(pre+'psf'+i).value, r=+id(pre+'rent'+i).value;
+  sellable+=c*s; sellout+=c*s*p; rentTot+=c*r; units+=c;
+  if(c>0){mix+=(mix?' · ':'')+c+' '+pl.labels[i];}
+  var tr=id(pre+'trow'+i);
+  if(tr) tr.textContent = c+' units x '+Math.round(s).toLocaleString()+' sf @ '+money(p)+'/sf = '+money(c*s*p);
+ }
+ var gsf=(pl.gsf>0?pl.gsf:sellable), constr=gsf*cpsf;
+ var d=deal(purchase, constr, sellout, pl.months);
+ var cal=+(pl.cost_cal||0), gcal=+(pl.gp_cal||0), ecal=+(pl.equity_cal||0);   // exact-match calibration for imported proformas (0 for pipeline)
+ if(cal||gcal){ d.cost+=cal; d.profit=d.profit-cal+gcal; d.roi=(d.cost>0?d.profit/d.cost*100:0); }
+ if(ecal){ d.equity+=ecal; }
+ var roi=id(pre+'roi');
+ roi.className='roi '+(d.roi>=0?'pos':'neg');
+ roi.innerHTML=(d.roi>=0?'+':'')+Math.round(d.roi)+'%<small>Return on cost</small>';
+ var pf=id(pre+'profit'); pf.textContent=money(d.profit); pf.className='v '+(d.profit>=0?'pos':'neg');
+ id(pre+'r_sellout').textContent=money(sellout);
+ id(pre+'r_cost').textContent=money(d.cost);
+ id(pre+'r_units').textContent=Math.round(units).toLocaleString();
+ id(pre+'r_gsf').textContent=Math.round(sellable).toLocaleString()+' / '+Math.round(gsf).toLocaleString()+' sf';
+ var gm=id(pre+'r_gsfmax'); if(gm) gm.textContent='max '+Math.round(pl.maxsell).toLocaleString()+' sf sellable';
+ var av=id(pre+'r_avgpsf'); if(av) av.textContent=(sellable>0?fmtVal(sellout/sellable,'psf'):'$0');   // blended sale $/sqft = sellout/sellable
+ var arentY1=rentTot*12*pl.rentf;                         // Year-1 gross annual rent
+ id(pre+'r_rent').textContent=money(arentY1);
+ id(pre+'r_equity').textContent=money(d.equity);
+ var un=id(pre+'r_unsell');           // rendered for condos AND imported multi-unit proformas
+ if(un){var pct=gsf>0?(gsf-sellable)/gsf*100:0;
+  un.textContent=Math.round(pct)+'% ('+Math.round(gsf-sellable).toLocaleString()+' sf)';}
+ var cp=id(pre+'r_cap');              // rendered for condos AND imported proformas with rents
+ if(cp){var vac=(pl.vac==null?0.05:+pl.vac);
+  var egr=arentY1*(1-vac);                                          // effective gross rent (KPI B33)
+  var noi=egr*pl.noif; var cap=d.cost>0?noi/d.cost*100:0;           // Year-1 NOI / cost (KPI E33)
+  cp.textContent=cap.toFixed(1)+'%';}
+ var mx=id(pre+'r_mix'); if(mx) mx.textContent=mix||'—';
+ var wn=id(pre+'warn');
+ if(wn){var over=sellable-pl.maxsell;
+  if(over>0){wn.className='warn show';
+   wn.textContent='Unit mix needs '+Math.round(sellable).toLocaleString()+' sf sellable, '+Math.round(over).toLocaleString()+' sf over the '+Math.round(pl.maxsell).toLocaleString()+' sf max this building can hold — reduce units or sizes.';}
+  else{wn.className='warn'; wn.textContent='';}}
+}
+function showPlay(P){
+ var ps=document.querySelectorAll('.play');
+ for(var i=0;i<ps.length;i++) ps[i].className='play';
+ var ts=document.querySelectorAll('.tab');
+ for(var j=0;j<ts.length;j++) ts[j].className='tab';
+ id('play'+P).className='play active';
+ var tb=id('tab'+P); if(tb) tb.className='tab active';
+}
+(function(){
+ var rs=document.querySelectorAll('input[type=range]');
+ for(var i=0;i<rs.length;i++){
+  rs[i].addEventListener('input',function(e){
+   var o=id(e.target.id+'_o');
+   if(o){o.textContent=fmtVal(e.target.value, e.target.getAttribute('data-fmt'));
+    o.className=(+e.target.value!=+e.target.getAttribute('data-orig'))?'cv moved':'cv';}
+   recompute(+e.target.getAttribute('data-play'));
+  });
+ }
+ var bs=document.querySelectorAll('.base');
+ for(var k=0;k<bs.length;k++){
+  bs[k].addEventListener('click',function(e){
+   var el=e.currentTarget;
+   var t=el.getAttribute('data-reset'), inp=id(t); if(!inp) return;
+   var rv=el.getAttribute('data-resetval');           // fixed target (e.g. $300); else back to orig
+   inp.value=(rv!==null&&rv!=='')?rv:inp.getAttribute('data-orig');
+   var o=id(t+'_o'); if(o){o.textContent=fmtVal(inp.value, inp.getAttribute('data-fmt'));
+    o.className=(+inp.value!=+inp.getAttribute('data-orig'))?'cv moved':'cv';}
+   recompute(+inp.getAttribute('data-play'));
+  });
+ }
+ for(var P=0;P<B.plays.length;P++) recompute(P);
+})();
+</script></body></html>
